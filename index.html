@@ -52,105 +52,118 @@
     </div>
     <script>
       /* EXERCISE 1
-             Write a function for changing the title of the document in something else.
-            */
-      const h1 = document.querySelector("h1");
+               Write a function for changing the title of the document in something else.
+              */
+      const nodeH1 = document.querySelector("h1");
       const changeTitle = function (newTitle) {
-        h1.innerText = "This is NOT the same Title of the page";
+        nodeH1.innerText = newTitle;
       };
 
       /* EXERCISE 2
-             Write a function for changing the class of the title of the page in "myHeading".
-            */
+               Write a function for changing the class of the title of the page in "myHeading".
+              */
 
       const addClassToTitle = function () {
-        h1.classList.add("myHeading");
+        nodeH1.classList.add("myHeading");
       };
 
       /* EXERCISE 3
-             Write a function for changing the text of only the p which are children of a div.
-            */
-      const divP = document.querySelectorAll("div");
+               Write a function for changing the text of only the p which are children of a div.
+              */
+      const nodeDivP = document.querySelectorAll("div>p");
       const changePcontent = function () {
-        const divP = document.querySelector("p");
+        for (const paragraphLoop of nodeDivP) {
+          paragraphLoop.innerText = "This is a totally different piece of text";
+        }
       };
 
       /* EXERCISE 4
-             Write a function for changing the href property of every link to https://www.google.com
-            */
-
+               Write a function for changing the href property of every link to https://www.google.com
+              */
+      const nodeAnchor = document.querySelectorAll("a");
       const changeUrls = function () {
-        document.querySelectorAll("a").href = "https://www.google.com";
+        for (anchorLoop of nodeAnchor) {
+          anchorLoop.href = "https://www.google.com";
+        }
       };
-
       /* EXERCISE 5
-             Write a function for adding a new list item in the second unordered list.
-            */
-      const newLI = document.querySelector("#secondList");
-      const addToTheSecond = function (content) {};
-      newLI = document.createElement("li");
-      newLI.textContent = "4th";
-
+               Write a function for adding a new list item in the second unordered list.
+              */
+      // WIP: Why I cannot use querySelector?  I was missing ""
+      // const nodeSecUl = document.querySelector("#secondList");
+      // WIP: Why I cannot use getElementById? I was missing ""
+      // const nodeSecUl = document.getElementById("secondList");
+      const nodeSecUl = document.querySelectorAll("ul")[1];
+      const addToTheSecond = function (content) {
+        const nodeNewLi = document.createElement("li");
+        nodeSecUl.appendChild(nodeNewLi);
+        nodeNewLi.innerText = content;
+      };
       /* EXERCISE 6
-             Write a function for adding a second paragraph to the first div.
-            */
-
+               Write a function for adding a second paragraph to the first div.
+              */
+      const nodeFirstDiv = document.querySelectorAll("div")[0];
       const addParagraph = function (content) {};
-
+      nodeFirstDiv.ad;
       /* EXERCISE 7
-             Write a function for making the first unordered list disappear.
-            */
-
+               Write a function for making the first unordered list disappear.
+              */
+      //WIP: How to select only the first one in this way? ---- querySelectorAll("")[] ----
+      const nodefirstUl = document.querySelectorAll("ul")[0];
       const firstUlDisappear = function () {
-        //
+        nodefirstUl.classList.add("hidden");
+        //WIP: How to add a property to .hidden from here?
+        hidden;
       };
 
       /* EXERCISE 8
-             Write a function for making the background of every unordered list green.
-            */
-      const greenUl = document.querySelectorAll("ul");
+               Write a function for making the background of every unordered list green.
+              */
+      //WIP: How to place the color in the background-color?
+      const nodeUl = document.querySelectorAll("ul");
       const paintItGreen = function () {
-        greenUl =
+        for (const ulLoop of nodeUl) {
+          ulLoop.style.backgroundColor = green;
+        }
       };
-
       /* EXERCISE 9
-             Make the heading of the page change color every time the user clicks on it.
-            */
+               Make the heading of the page change color every time the user clicks on it.
+              */
 
       const makeItClickable = function () {
         //
       };
 
       /* EXERCISE 10
-             Change the footer text with something else when the user clicks on it.
-            */
+               Change the footer text with something else when the user clicks on it.
+              */
 
       const changeFooterText = function () {
         //
       };
 
       /* EXERCISE 11
-             Attach an event listener to the input field in the page that changes the text of the page's subtitle
-            */
+               Attach an event listener to the input field in the page that changes the text of the page's subtitle
+              */
 
       const inputField = document.getElementById("input-field");
       // ...
 
       /* EXERCISE 11
-             Attach an event listener to the input field in the page that changes the text of the page's subtitle
-            */
+               Attach an event listener to the input field in the page that changes the text of the page's subtitle
+              */
 
       window.onload = function () {
         //
       };
 
       /* EXERCISE 13
-             Use HTML5 tags to properly provide semantic meaning to the different portions of the page.
-            */
+               Use HTML5 tags to properly provide semantic meaning to the different portions of the page.
+              */
 
       /* ### EXTRA ###  EXERCISE 14
-             Create an input of type "color" and use it to change the color of the subtitle
-            */
+               Create an input of type "color" and use it to change the color of the subtitle
+              */
     </script>
   </body>
 </html>
