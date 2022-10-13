@@ -89,9 +89,9 @@
       /* EXERCISE 5
                Write a function for adding a new list item in the second unordered list.
               */
-      // WIP: Why I cannot use querySelector?  I was missing ""
-      // const nodeSecUl = document.querySelector("#secondList");
-      // WIP: Why I cannot use getElementById? I was missing ""
+      // WIP: Why I cannot use querySelector?  I was missing "" on the argument of the function
+      // const nodeSecUl = document.querySelector("#secondList")
+      // WIP: Why I cannot use getElementById? I was missing "" on the argument of the function
       // const nodeSecUl = document.getElementById("secondList");
       const nodeSecUl = document.querySelectorAll("ul")[1];
       const addToTheSecond = function (content) {
@@ -111,9 +111,9 @@
       //WIP: How to select only the first one in this way? ---- querySelectorAll("")[] ----
       const nodefirstUl = document.querySelectorAll("ul")[0];
       const firstUlDisappear = function () {
-        nodefirstUl.classList.add("hidden");
         //WIP: How to add a property to .hidden from here?
-        hidden;
+        //nodefirstUl.classList.add("hidden");
+        nodefirstUl.style.display = "none";
       };
 
       /* EXERCISE 8
@@ -123,7 +123,7 @@
       const nodeUl = document.querySelectorAll("ul");
       const paintItGreen = function () {
         for (const ulLoop of nodeUl) {
-          ulLoop.style.backgroundColor = green;
+          ulLoop.style.backgroundColor = "green";
         }
       };
       /* EXERCISE 9
